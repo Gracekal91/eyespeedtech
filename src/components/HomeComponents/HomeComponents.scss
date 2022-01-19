@@ -1,0 +1,90 @@
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../assets/images/bg.png'); //to darkned a bit in Photoshop
+    background-repeat: no-repeat;
+    background-size: fit; //background cover the big size
+    background-position-x:center;
+    position: relative;
+
+    .heroContent{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: aliceblue;
+
+       p{
+           opacity: .7;
+           font-size: .7rem;
+           font-weight: 200;
+           margin-top: -.6rem;
+       }
+
+       .heroBtn{
+           background: #0B5eda;
+           color: aliceblue;
+           font-weight: 300 !important;
+            padding: .5rem 2rem;
+       }
+    }
+}
+
+// Navigation
+
+.navigation{
+    width: 100%;
+    color: aliceblue;
+    padding: 0 0;
+ 
+    .overlay{
+        background: #020307;
+        opacity: .7;
+        width: 100%;
+        height: 4.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .navContent{
+        z-index: 10;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        .logo{
+            width: 70px;
+            height: 70px;
+        }
+
+        .burger{
+            margin-top: 1.81rem;
+            .line1{
+                width: 35px;
+                height: 2px;
+                background: aliceblue;
+                margin-bottom: 5px;
+                border-radius: 50px;
+            }
+            .line2{
+                width: 30px;
+                height: 2px;
+                background: aliceblue;
+                margin-bottom: 5px;
+                border-radius: 50px;
+            }
+            .line3{
+                width: 25px;
+                height: 2px;
+                background: aliceblue;
+                border-radius: 50px;
+            }
+          
+        }
+
+    }
+
+}
