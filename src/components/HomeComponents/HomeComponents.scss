@@ -3,9 +3,9 @@
     height: 100vh;
     background-image: url('../../assets/images/bg.png'); //to darkned a bit in Photoshop
     background-repeat: no-repeat;
-    background-size: fit; //background cover the big size
     background-position-x:center;
     position: relative;
+    margin-bottom: 2.5rem;
 
     .heroContent{
         position: absolute;
@@ -48,6 +48,18 @@
         left: 0;
         z-index: 1;
     }
+    .sideBar{
+        width: 50%;
+        height: 50vh;
+        margin-top: .090rem;
+        background: rgba(0, 0, 0, 0.726);
+        position: relative;
+        z-index: 50;
+        padding: 5rem 2rem;
+        color: aliceblue;
+  
+  
+    }
 
     .navContent{
         z-index: 10;
@@ -62,12 +74,14 @@
 
         .burger{
             margin-top: 1.81rem;
+            cursor: pointer;
             .line1{
                 width: 35px;
                 height: 2px;
                 background: aliceblue;
                 margin-bottom: 5px;
                 border-radius: 50px;
+                transition: .2s ease-out;
             }
             .line2{
                 width: 30px;
@@ -75,16 +89,188 @@
                 background: aliceblue;
                 margin-bottom: 5px;
                 border-radius: 50px;
+                transition: .2s ease-out;
             }
             .line3{
                 width: 25px;
                 height: 2px;
                 background: aliceblue;
                 border-radius: 50px;
+                transition: .2s ease-out;
             }
-          
+  
+        }
+        .burger:hover{
+           .line{
+               width: 36px;
+               transition: .2s ease-in;
+           }
+        }
+        .desktopMenu{
+            display: none;
         }
 
     }
 
+}
+
+//contents
+
+.contents{
+    .sectionOne{
+        h1{
+            color: rgb(70, 70, 70);
+        }
+        p{
+            color: rgb(100, 99, 99);
+        }
+        margin-bottom: 2.5rem;
+        margin-top: -6.5rem;
+    }
+    .sectionTwo{
+        background: rgba(128, 128, 128, 0.096);
+        padding: 1.5rem .8rem;
+        h1{
+            padding-bottom:.5rem;
+        }
+        .sectionTwoBox{
+            display: grid;
+            div{
+                padding: 1rem .8rem;
+                border: rgba(128, 128, 128, 0.473) 1px solid;
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    .sectionThree{
+        background-image: url('../../assets/images/bg.png');
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        position: relative;
+        .form{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            background-color: rgba(0, 0, 0, 0.925);
+            padding: 2rem;
+            border-radius: 1rem;
+
+            form{
+                input{
+                    background: transparent;
+                    border: unset;
+                    border-bottom: 1px rgba(240, 248, 255, 0.295) solid;
+                    outline: none;
+                    color: aliceblue;
+                    padding-bottom:.5rem ;
+                    margin-top: .6rem;
+                }
+            }
+        }
+    }
+
+    .projects{
+        margin-top: 13rem;
+        a:hover{
+            transform: scale(0.98);
+            transition: .2s ease-in;
+        }
+        .singleProject{
+            margin-bottom: 2px;
+            padding: 8rem .5rem 1rem .5rem;
+            border-radius: 4px;
+            
+            .cardContent{
+                background: rgb(14, 14, 20);
+                margin-top: 6rem;
+                text-align: left !important;
+                padding: .6rem;
+                border-radius: 5px;
+                color: gray;
+                h3{
+                    color: rgb(219, 218, 218);
+                }
+            }
+        }
+    }
+
+    .footer{
+        width: 100%;
+        background: rgb(17, 17, 36);
+        color: rgb(202, 202, 202);
+        text-align: center;
+        height: 60px;
+
+        p{
+            padding-top: 1.2rem;
+        }
+    }
+    
+}
+
+//Media Query
+
+@media (min-width: 860px) {
+    .hero{
+        background-size: cover;
+    }
+
+
+  .navigation{
+      .navContent{
+          .burger{
+              display: none;
+          }
+          .desktopMenu{
+              display: inline;
+              line-height: 4.5rem;
+              a{
+                  margin-right: 15px;
+                  text-decoration: none;
+                  color: rgb(219, 218, 218);
+              }
+          }
+      }
+  }
+
+  .contents{
+      .sectionOne{
+          margin-top: 0;
+      }
+      .sectionTwo{
+          padding: 2rem 0;
+          .sectionTwoBox{
+              grid-template-columns: repeat(2, 1fr);
+              gap: .6rem;
+          }
+      }
+      .sectionThree{
+          height: 350px;
+          .form{
+              width: 50%;
+              margin-top: 2rem;
+              padding: 3.5rem 1.5rem;
+              input{
+                  width: 100%;
+              }
+          }
+      }
+      .projects{
+          .projectsBox{
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              gap: 10px;
+              text-align: center;
+          }
+      }
+  }
+}
+
+//General
+a{
+    text-decoration: none;
+    transition: .2s ease-out;
 }

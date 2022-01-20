@@ -4,6 +4,7 @@ import Navigation from './Navigation'
 
 const Hero = () => {
     return (
+
         <div className='hero'>
             <Navigation />
             <div className="heroContent">
@@ -12,6 +13,8 @@ const Hero = () => {
                 <button className='btn heroBtn'>Learn More</button>
             </div>
         </div>
+
+
     )
 }
 
