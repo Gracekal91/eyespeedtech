@@ -86,7 +86,7 @@ const Projects = () => {
                 <h1>Recent Projects</h1>
                 <div className="projectsBox">
                     {projects.map((item) => {
-                        return <Project item={item} />
+                        return <Project item={item} key={item.id} />
                     })}
                 </div>
             </div>
